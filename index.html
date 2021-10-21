@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Hackathon Flip Game!</title>
+    </head>
+    <body>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/74d2a00a-b5c0-42d4-b131-fafcca22e4cf/d7ay4tw-1fa7c44d-2500-43ef-8d40-c16d939ca024.png" class = "decoration">
+        <div class="front">
+            <header>
+                <h1>Tiket Box</h1>
+            </header>
+            <div class="welcome">
+                <h2>Now<br><span>Playing..</span></h2>
+              </div>
+            <div class ="film">
+                <img src="https://media.matamata.com/thumbs/2021/09/27/44614-sinopsis-the-medium-imdb/o-img-44614-sinopsis-the-medium-imdb.jpg" alt="The Medium" onclick="filmPilihan()">
+                <img src="https://media.21cineplex.com/webcontent/gallery/pictures/163307215533128_287x421.jpg" alt="Dune" onclick="filmPilihan()"><br>
+                <p>The Medium</p>
+                <p>Dune</p>
+            </div>
+        </div>
+        <div class="order">
+            <h2>Order Now!</h2>
+            <form action="">
+                <label for="quantity">Quantity</label><input type="number">
+                <label for="date">Date</label><input type="date" class="tanggalPilihan">
+                <label for="time">Pick your time!</label>
+                <input type="radio" id="1200" name="waktuPilihan" value="1200">
+                    <label for="1200">12:00</label><br>
+                <input type="radio" id="1400" name="waktuPilihan" value="1400">
+                    <label for="1400">14:00</label><br>
+                <input type="radio" id="1600" name="waktuPilihan" value="1600">
+                    <label for="1600">16:00</label><br>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column occupied"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    
+    <script src="js/script.js"></script>
+</html>
