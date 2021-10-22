@@ -13,22 +13,9 @@
         <div id="header">
             <h1>Tiket Box</h1>
         </div>
-        <h2>Play Now</h2>
+        <h2>Playing Now</h2>
         <div id="list-container">
-            <!-- <div class="list">
-                <img src="https://media.matamata.com/thumbs/2021/09/27/44614-sinopsis-the-medium-imdb/o-img-44614-sinopsis-the-medium-imdb.jpg" alt="The Medium">
-                <div>
-                    <h6>The Medium</h6>
-                    <p>Rp. 60 000</p>
-                </div>
-            </div> -->
-            <!-- <div class="list">
-                <img src="https://media.21cineplex.com/webcontent/gallery/pictures/163307215533128_287x421.jpg" alt="">
-                <div>
-                    <h6>Dune</h6>
-                    <p>Rp. 60 000</p>
-                </div>
-            </div> -->
+            
         </div>
     </section>
     <section id="transaction">
@@ -41,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tiket" id="tiket-label">Banyak Tiket</label><br>
-                    <input type="number" id="tiket" name="tiket" placeholder="Jumlah Tiket" required><br>
+                    <input type="number" id="tiket" name="tiket" placeholder="Jumlah Tiket" min="0" required><br>
                 </div>
                 <div class="form-group">
                     <label for="dropdown">List Film</label><br>
@@ -65,12 +52,21 @@
     <section>
         <div id="modal" class="simple-modal">
             <div class="modal-content" id="modalCard">
-                <span class="closeBtn" onclick="closeModalBtn()">&times;</span>
                 <p>ini modal</p>
             </div>
         </div>
     </section>
-    
+
+    <section>
+        <div id="modalCheckout" class="simple-modal">
+            <div class="modal-content" id="modalCardCheckout">
+                <span onclick="closeBtn()">&times;</span>
+                <p>ini modal</p>
+            </div>
+        </div>
+    </section>
+
+    <img src="https://purepng.com/public/uploads/large/purepng.com-popcornpopcorncorndent-cornflint-corn-1411528651160xynxk.png" class="decor">
 
     <script src="./index.js"></script>
 </body>
