@@ -71,24 +71,27 @@ function checkoutBtn() {
     const waktu = document.querySelector('input[name=waktu]:checked').value
     simpleModal.style.display = 'block'
     if (name == "") {
-         alert("INPUT NAMA!")
-         location.reload();
+        alert("INPUT NAMA!")
+        location.reload();
     }
     if (jumlahTiket == "") {
-         alert("ISI JUMLAH TIKET!")
-         location.reload();
+        alert("ISI JUMLAH TIKET!")
+        location.reload();
     }
-    if (selectedFilm == "none"){
-         alert("MAU NONTON APA!!!")
-         location.reload();
+    if (selectedFilm == "none") {
+        alert("MAU NONTON APA!!!")
+        location.reload();
     }
     
-    
+
+
+
     console.log(waktu)
-        const biaya = totalHarga(jumlahTiket, selectedFilm, data)
+    const biaya = totalHarga(jumlahTiket, selectedFilm, data)
 
     let modal = document.getElementById('modalCard')
     modal.innerHTML = `
+    <div class="receipt">
     <p>Username : ${name}</p>
     <p>Jumlah tiket yang dibeli: ${jumlahTiket}</p>
     <p>Film yang dipilih : ${selectedFilm}</p>
@@ -96,6 +99,7 @@ function checkoutBtn() {
     <p>Total Harga: ${biaya}</p>
     <button class="closeBtn" onclick="closeModalBtn()">Edit order</button>
     <button class="submit" onclick="submitOrder()">Submit order</button>
+    </div>
     `
 
 }

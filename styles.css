@@ -184,3 +184,40 @@ input[type=number] {
     overflow: auto;
     background-color: rgba(0, 0,0, 0.5);
 }
+
+.closeBtn {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color: #306108;
+    border-color:#268a16;
+    font-weight:bold;
+    border-radius: 6px;
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+    text-shadow:inset 0px 1px 0px #ffee66;
+    background:linear-gradient(#ffec64, #ffab23);
+}
+
+.closeBtn:hover {
+    background: linear-gradient(#ffab23, #ffec64);
+}
+
+.submit{
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#306108;
+    border-color:#268a16;
+    font-weight:bold;
+   border-radius: 6px;
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+    text-shadow:inset 0px 1px 0px #aade7c;
+    background:linear-gradient(#77d42a, #5cb811);
+}
+.submit:hover {
+    background: linear-gradient(#5cb811, #77d42a);
+  }
