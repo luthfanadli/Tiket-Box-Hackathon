@@ -22,9 +22,9 @@ let data = [
 ]
 
 //function untuk merender list film
-function renderList () {
+function renderList() {
     let list = document.getElementById('list-container')
-    for (let i = 0; i < data.length; i++){
+    for (let i = 0; i < data.length; i++) {
         list.innerHTML += `
         <div class="list">
             <img src=${data[i].image} alt="The Medium">
@@ -39,9 +39,9 @@ function renderList () {
 renderList()
 
 //function untuk dropdown list film
-function dropdown () {
+function dropdown() {
     let list = document.getElementById('dropdown')
-    for (let i = 0; i < data.length; i++){
+    for (let i = 0; i < data.length; i++) {
         list.innerHTML += `
         <option>${data[i].judul}</option>
         `
@@ -50,10 +50,10 @@ function dropdown () {
 }
 dropdown()
 
-function totalHarga (quantity, film, data){
+function totalHarga(quantity, film, data) {
     let result
-    for (let i = 0; i < data.length; i++){
-        if(data[i].judul === film){
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].judul === film) {
             result = data[i].harga * quantity
         }
     }
@@ -64,17 +64,25 @@ function totalHarga (quantity, film, data){
 let simpleModal = document.getElementById('modal')
 let closeBtn = document.getElementsByClassName('closeBtn')[0]
 
-function checkoutBtn () {
+function checkoutBtn() {
     const name = document.getElementById('name').value
     const jumlahTiket = document.getElementById('tiket').value
     const selectedFilm = document.getElementById('dropdown').value
     const waktu = document.querySelector('input[name=waktu]:checked').value
-    
-    const biaya = totalHarga(jumlahTiket, selectedFilm, data)
-
     simpleModal.style.display = 'block'
-
+    if (name == "") {
+        return alert("INPUT NAMA!")
+    }
+    if (jumlahTiket == "") {
+        return alert("ISI JUMLAH TIKET!")
+    }
+    if (selectedFilm == "none"){
+        return alert("MAU NONTON APA!!!")
+    }
     
+    console.log(waktu)
+        const biaya = totalHarga(jumlahTiket, selectedFilm, data)
+
     let modal = document.getElementById('modalCard')
     modal.innerHTML = `
     <p>Username : ${name}</p>
@@ -85,11 +93,12 @@ function checkoutBtn () {
     <button class="closeBtn" onclick="closeModalBtn()">Edit order</button>
     <button class="submit" onclick="submitOrder()">Submit order</button>
     `
+
 }
 
 
 let modalCheckout = document.getElementById('modalCheckout')
-function submitOrder(){
+function submitOrder() {
     simpleModal.style.display = 'none'
     modalCheckout.style.display = 'block'
     let modal = document.getElementById('modalCardCheckout')
@@ -98,13 +107,13 @@ function submitOrder(){
     <button onclick="closeCheckoutBtn(); reset();">&times;</button>
     `
 }
-function closeModalBtn(){
+function closeModalBtn() {
     simpleModal.style.display = 'none'
 }
-function reset(){
+function reset() {
     document.getElementById("form").reset();
-   
+
 }
-function closeCheckoutBtn(){
+function closeCheckoutBtn() {
     modalCheckout.style.display = 'none'
 }
