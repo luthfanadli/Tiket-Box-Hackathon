@@ -69,7 +69,7 @@ function checkoutBtn () {
     const jumlahTiket = document.getElementById('tiket').value
     const selectedFilm = document.getElementById('dropdown').value
     const waktu = document.querySelector('input[name=waktu]:checked').value
-
+    
     const biaya = totalHarga(jumlahTiket, selectedFilm, data)
 
     simpleModal.style.display = 'block'
@@ -77,19 +77,27 @@ function checkoutBtn () {
     
     let modal = document.getElementById('modalCard')
     modal.innerHTML = `
-    <span class="closeBtn" onclick="closeModalBtn()">&times;</span>
     <p>Username : ${name}</p>
     <p>Jumlah tiket yang dibeli: ${jumlahTiket}</p>
     <p>Film yang dipilih : ${selectedFilm}</p>
     <p>Waktu Penayangan : ${waktu}</p>
     <p>Total Harga: ${biaya}</p>
+    <button class="closeBtn" onclick="closeModalBtn()">Edit order</button>
+    <button class="submit" onclick="submitOrder()">Submit order</button>
     `
-
 }
 
-function closeModalBtn () {
+
+let modalCheckout = document.getElementById('modalCheckout')
+function submitOrder(){
+    simpleModal.style.display = 'none'
+    modalCheckout.style.display = 'block'
+    let modal = document.getElementById('modalCardCheckout')
+    modal.innerHTML = `
+    Selamat order anda sudah diproses
+    <span onclick="closeModalBtn()">&times;</span>
+    `
+}
+function closeModalBtn(){
     simpleModal.style.display = 'none'
 }
-
-
-

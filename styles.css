@@ -3,6 +3,7 @@
 }
 body{
     position: relative;
+    background-image: url("https://images.genial.ly/5ecda8a2341f013a93861ba1/2efb970d-1881-4287-82fd-51b7dd7406a9.png");
 }
 #main {
     background-image: linear-gradient(to bottom, #f9e4c8, #f9e6ce, #fae9d4, #faebda, #faeee0);
@@ -36,7 +37,10 @@ h1{
 h2{
     margin-left: 10%;
     margin-bottom: 30px;
-    font-size: 35px;
+    font-family: 'Droid serif', serif; 
+    font-size: 36px; 
+    font-weight: 250px; 
+    font-style: italic;
 }
 .list {
     background-color: white;
@@ -95,8 +99,9 @@ h6{
 
 .decor{
     position:absolute;
-    height: 600px;
-    bottom: 50px;
+    height: 700px;
+    left: -50px;
+    bottom: 20px;
     z-index: 0;
 }
 
@@ -159,14 +164,14 @@ input[type=number] {
     box-shadow: 0 5px 8px 0 rgba(0, 0,0, 0.2), 0 7px 20px 0 rgba(0, 0,0, 0.2);
 }
 
-.closeBtn {
-    color: #ccc;
-    float: right;
-    font-size: 30px;
-}
-
-.closeBtn:hover, .closeBtn:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+#modalCheckout{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0,0, 0.5);
 }
