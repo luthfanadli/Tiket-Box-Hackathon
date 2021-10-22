@@ -6,7 +6,7 @@ body{
     background-image: url("https://images.genial.ly/5ecda8a2341f013a93861ba1/2efb970d-1881-4287-82fd-51b7dd7406a9.png");
 }
 #main {
-    background-image: linear-gradient(to bottom, #f9e4c8, #f9e6ce, #fae9d4, #faebda, #faeee0);
+    /* background-image: linear-gradient(to bottom, #f9e4c8, #f9e6ce, #fae9d4, #faebda, #faeee0); */
     padding: 20px;
     padding-bottom: 50px;
     width: 100vw;
@@ -91,6 +91,7 @@ h6{
 
 #transaction-container h3 {
     text-align: center;
+    margin: 5px;
 }
 
 .form {
@@ -99,7 +100,7 @@ h6{
 
 .decor{
     position:absolute;
-    height: 700px;
+    height: 600px;
     left: -50px;
     bottom: 20px;
     z-index: 0;
@@ -108,6 +109,7 @@ h6{
 input[type=text] {
     border: none;
     padding: 5px;
+    margin: 5px;
     width: 100%;
     border-radius: 4px;
 }
@@ -115,6 +117,7 @@ input[type=text] {
 input[type=number] {
     border: none;
     border: none;
+    margin: 5px;
     padding: 5px;
     width: 100%;
     border-radius: 4px;
@@ -123,6 +126,7 @@ input[type=number] {
 #dropdown {
     width: 102%;
     padding: 5px;
+    margin: 5px;
     border-radius: 5px;
     border-style: none;
 }

@@ -95,9 +95,16 @@ function submitOrder(){
     let modal = document.getElementById('modalCardCheckout')
     modal.innerHTML = `
     Selamat order anda sudah diproses
-    <span onclick="closeModalBtn()">&times;</span>
+    <button onclick="closeCheckoutBtn(); reset();">&times;</button>
     `
 }
 function closeModalBtn(){
     simpleModal.style.display = 'none'
+}
+function reset(){
+    document.getElementById("form").reset();
+   
+}
+function closeCheckoutBtn(){
+    modalCheckout.style.display = 'none'
 }
