@@ -12,7 +12,12 @@ let data = [
     {
         image: 'https://i.pinimg.com/236x/f5/b0/f1/f5b0f1a11a25f24de961d2d624be23a5.jpg',
         judul: "Winter in tokyo",
-        harga: 100000
+        harga: 50000
+    },
+    {
+        image: 'https://cdn0-production-images-kly.akamaized.net/JiCDYDWDmwp7DDNIBlTTGOzABGE=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3434118/original/014340800_1618897521-EzVqwiaVoAIAv-E.jpg',
+        judul: "Shang-chi",
+        harga: 70000
     },
 ]
 
@@ -68,6 +73,8 @@ function checkoutBtn () {
     const biaya = totalHarga(jumlahTiket, selectedFilm, data)
 
     simpleModal.style.display = 'block'
+
+    
     let modal = document.getElementById('modalCard')
     modal.innerHTML = `
     <span class="closeBtn" onclick="closeModalBtn()">&times;</span>
