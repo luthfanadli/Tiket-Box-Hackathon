@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+#main {
+    background-image: linear-gradient(to bottom, #f9e4c8, #f9e6ce, #fae9d4, #faebda, #faeee0);
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list {
+    background-color: white;
+    box-shadow: 4px 8px 29px -8px rgba(0,0,0,0.75);
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 260px;
+    padding: 16px;
+}
+
+.list img {
+    height: 250px;
+    object-fit: contain;
+}
+
+#transaction {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    padding-bottom: 100px;
+    
+}
+
+#transaction-container {
+    background-image: linear-gradient(to bottom, #f9e4c8, #f9e6ce, #fae9d4, #faebda, #faeee0);
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 29px -8px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+#transaction-container h3 {
+    text-align: center;
+}
+
+.form {
+    line-height: 30px;
+}
+
+
+input[type=text] {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+input[type=number] {
+    border: none;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#dropdown {
+    width: 102%;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#btn-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.checkout-btn {
+    border: none;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.checkout-btn:hover{
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0,0, 0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0,0, 0.2), 0 7px 20px 0 rgba(0, 0,0, 0.2);
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
