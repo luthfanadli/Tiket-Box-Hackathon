@@ -71,14 +71,18 @@ function checkoutBtn() {
     const waktu = document.querySelector('input[name=waktu]:checked').value
     simpleModal.style.display = 'block'
     if (name == "") {
-        return alert("INPUT NAMA!")
+         alert("INPUT NAMA!")
+         location.reload();
     }
     if (jumlahTiket == "") {
-        return alert("ISI JUMLAH TIKET!")
+         alert("ISI JUMLAH TIKET!")
+         location.reload();
     }
     if (selectedFilm == "none"){
-        return alert("MAU NONTON APA!!!")
+         alert("MAU NONTON APA!!!")
+         location.reload();
     }
+    
     
     console.log(waktu)
         const biaya = totalHarga(jumlahTiket, selectedFilm, data)
